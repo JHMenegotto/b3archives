@@ -1,0 +1,17 @@
+Package: b3archives
+Type: Package
+Title: B3 Archives
+Version: 0.0.9000
+Authors@R: c(
+  person("Menegotto", "Joao", email = "joaohenrique@vokin.com.br", role = c("aut", "cre"))
+  )
+Description: Data tidyng B3 archives.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports:
+  dplyr,
+  xml2,
+  purrr
