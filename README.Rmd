@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# b3archives
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Download and read files from B3 (Brazil Stock Exchange and Over-the-Counter Market, formerly BM&FBovespa). You can find more files and their respective layouts in the [B3 webside](http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/boletins-diarios/pesquisa-por-pregao/layout-dos-arquivos/).
+
+## Installation
+
+You can install the released version of `b3archives` from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("b3archives")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("JHMenegotto/b3archives")
+```
+## Example
+
+Download and read the Index Report (BVBG.087.01):
+
+```{r example}
+library(b3archives)
+archive <- b3_indexreport_download(as.Date("2019-09-18"))
+df <- b3_indexreport_read(archive)
+file.remove(archive)
+dplyr::glimpse(df)
+```
+
+

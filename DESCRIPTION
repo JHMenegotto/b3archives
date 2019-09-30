@@ -1,11 +1,11 @@
 Package: b3archives
 Type: Package
 Title: B3 Archives
-Version: 0.0.9000
+Version: 1.0.0
 Authors@R: c(
-  person("Menegotto", "Joao", email = "joaohenrique@vokin.com.br", role = c("aut", "cre"))
+  person("Menegotto", "Joao", email = "jhrmenegotto@gmail.com", role = c("aut", "cre"))
   )
-Description: Data tidyng B3 archives.
+Description: Data tidyng B3 - Brazil Stock Exchange and Over-the-Counter Market (formerly BM&FBovespa) files.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
