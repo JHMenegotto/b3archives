@@ -5,7 +5,7 @@ b3archives
 
 <!-- badges: start -->
 <!-- badges: end -->
-Download and read files from B3 (Brazil Stock Exchange and Over-the-Counter Market, formerly BM&FBovespa). You can find more files and their respective layouts in the [B3 website](http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/boletins-diarios/pesquisa-por-pregao/layout-dos-arquivos/).
+Download and read files from B3 (Brazil Stock Exchange and Over-the-Counter Market). You can find more files and their respective layouts in the [B3 website](http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/boletins-diarios/pesquisa-por-pregao/layout-dos-arquivos/).
 
 Installation
 ------------
@@ -36,7 +36,7 @@ df <- b3_indexreport_read(archive)
 file.remove(archive)
 #> [1] TRUE
 dplyr::glimpse(df)
-#> Observations: 375
+#> Observations: 399
 #> Variables: 4
 #> $ Date         <date> 2019-09-18, 2019-09-18, 2019-09-18, 2019-09-18, ...
 #> $ TickerSymbol <chr> "ICO2", "ISEE", "BDRX", "MLCX", "INDX", "SMLL", "...
