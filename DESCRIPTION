@@ -15,3 +15,7 @@ Imports:
   dplyr,
   xml2,
   purrr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
