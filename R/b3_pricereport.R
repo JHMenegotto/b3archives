@@ -22,7 +22,7 @@ b3_pricereport_download <- function(date, last = TRUE, directory = getwd()){
     stop("date should be a Date class object!")
   }
 
-  url <- paste0("http://www.bmfbovespa.com.br/pesquisapregao/download?filelist=PR",
+  url <- paste0("http://www.b3.com.br/pesquisapregao/download?filelist=PR",
                 format(date, "%y%m%d"),
                 ".zip")
 

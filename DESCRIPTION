@@ -5,7 +5,7 @@ Version: 1.0.0
 Authors@R: c(
   person("Menegotto", "Joao", email = "jhrmenegotto@gmail.com", role = c("aut", "cre"))
   )
-Description: Data tidying B3 - Brazil Stock Exchange and Over-the-Counter Market (formerly BM&FBovespa) files.
+Description: Data tidying B3 - Brazil Stock Exchange and Over-the-Counter Market files.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

@@ -22,7 +22,7 @@ b3_indexreport_download <- function(date, last = TRUE, directory = getwd()){
     stop("date should be a Date class object!")
   }
 
-  url <- paste0("http://www.bmfbovespa.com.br/pesquisapregao/download?filelist=IR",
+  url <- paste0("http://www.b3.com.br/pesquisapregao/download?filelist=IR",
                 format(date, "%y%m%d"),
                 ".zip")
 
@@ -142,6 +142,21 @@ b3_indexreport_read <- function(file){
       xml2::xml_find_all("/Document/BizFileHdr/Xchg/BizGrp/Document/IndxRpt/IndxInf/SctyInf/PrvsDayClsgPric") %>%
       xml2::xml_double(),
     Attribute = "PrvsDayClsgPric"
+  )
+
+  # Closing Price.
+  l[["ClsgPric"]] <- dplyr::data_frame(
+    Date = BVBG.087.01 %>%
+      xml2::xml_find_all("/Document/BizFileHdr/Xchg/BizGrp/Document/IndxRpt/IndxInf/SctyInf/ClsgPric/../../../TradDt/Dt") %>%
+      xml2::xml_text() %>%
+      as.Date(),
+    TickerSymbol = BVBG.087.01 %>%
+      xml2::xml_find_all("/Document/BizFileHdr/Xchg/BizGrp/Document/IndxRpt/IndxInf/SctyInf/ClsgPric/../SctyId/TckrSymb") %>%
+      xml2::xml_text(),
+    Value = BVBG.087.01 %>%
+      xml2::xml_find_all("/Document/BizFileHdr/Xchg/BizGrp/Document/IndxRpt/IndxInf/SctyInf/ClsgPric") %>%
+      xml2::xml_double(),
+    Attribute = "ClsgPric"
   )
 
   # Index Value.
