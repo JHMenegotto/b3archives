@@ -3,3 +3,5 @@
 ^README\.Rmd$
 ^doc$
 ^Meta$
+^CRAN-RELEASE$
+^cran-comments\.md$
