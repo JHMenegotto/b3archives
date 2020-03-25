@@ -1,9 +1,9 @@
 Package: b3archives
 Type: Package
-Title: Read Public Files From B3
+Title: Read Public Files from B3
 Version: 1.0.0
 Authors@R: c(person("Menegotto", "Joao", email = "jhrmenegotto@gmail.com", role = c("aut", "cre")))
-Description: The package reads public files released by B3 - Brazil Stock Exchange and Over-the-Counter Market.
+Description: Reads public files released by B3 - Brazil Stock Exchange and Over-the-Counter Market.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
