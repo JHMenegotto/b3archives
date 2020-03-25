@@ -4,7 +4,7 @@
 \alias{b3_indexreport_download}
 \title{Get Index Report BVBG.087.01}
 \usage{
-b3_indexreport_download(date, last = TRUE, directory = getwd())
+b3_indexreport_download(date, last = TRUE, directory = tempdir())
 }
 \arguments{
 \item{date}{"yyyy-mm-dd" in class Date format}

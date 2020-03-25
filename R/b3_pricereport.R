@@ -13,7 +13,7 @@
 #' @return a file
 #' @export
 
-b3_pricereport_download <- function(date, last = TRUE, directory = getwd()){
+b3_pricereport_download <- function(date, last = TRUE, directory = tempdir()){
 
   first_wd <- getwd()
   setwd(directory)
@@ -47,7 +47,7 @@ b3_pricereport_download <- function(date, last = TRUE, directory = getwd()){
   file.remove(unzipped_file_again[unzipped_file_again != unzipped_file_again[which_file]])
 
   setwd(first_wd)
-  unzipped_file_again[which_file]
+  paste0(directory, "/", unzipped_file_again[which_file])
 }
 
 
@@ -65,7 +65,7 @@ b3_pricereport_download <- function(date, last = TRUE, directory = getwd()){
 b3_pricereport_read <- function(file){
 
   BVBG.086.01 <- xml2::read_xml(file)
-  print(paste0("Stripping node set from file ", file, ". It can take a long time..."))
+  message(paste0("Stripping node set from file ", file, ". It can take a long time..."))
   xml2::xml_ns_strip(BVBG.086.01)
 
   l <- list()

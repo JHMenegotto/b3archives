@@ -4,7 +4,7 @@
 \alias{b3_pricereport_download}
 \title{Get Pricing Report BVBG.086.01}
 \usage{
-b3_pricereport_download(date, last = TRUE, directory = getwd())
+b3_pricereport_download(date, last = TRUE, directory = tempdir())
 }
 \arguments{
 \item{date}{"yyyy-mm-dd" in class Date format}
