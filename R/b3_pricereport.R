@@ -11,11 +11,16 @@
 #'
 #'
 #' @return a file
+#' @examples
+#'\donttest{
+#' b3_pricereport_download(as.Date("2020-01-31"))
+#'}
 #' @export
 
 b3_pricereport_download <- function(date, last = TRUE, directory = tempdir()){
 
   first_wd <- getwd()
+  on.exit(first_wd)
   setwd(directory)
 
   if(class(date) != "Date"){
@@ -46,7 +51,6 @@ b3_pricereport_download <- function(date, last = TRUE, directory = tempdir()){
   file.remove(unzipped_file)
   file.remove(unzipped_file_again[unzipped_file_again != unzipped_file_again[which_file]])
 
-  setwd(first_wd)
   paste0(directory, "/", unzipped_file_again[which_file])
 }
 
@@ -60,6 +64,10 @@ b3_pricereport_download <- function(date, last = TRUE, directory = tempdir()){
 #' @import purrr
 #'
 #' @return a data_frame with tidy data
+#' @examples
+#' \donttest{
+#' b3_pricereport_read(b3_pricereport_download(as.Date("2020-01-31")))
+#' }
 #' @export
 
 b3_pricereport_read <- function(file){

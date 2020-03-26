@@ -19,3 +19,8 @@ a file
 \description{
 Downloads archive Index Report BVBG.087.01 from B3's website
 }
+\examples{
+\donttest{
+b3_indexreport_download(as.Date("2020-01-31"))
+}
+}

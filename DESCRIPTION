@@ -3,7 +3,7 @@ Type: Package
 Title: Read Public Files from B3
 Version: 1.0.0
 Authors@R: c(person("Menegotto", "Joao", email = "jhrmenegotto@gmail.com", role = c("aut", "cre")))
-Description: Reads public files released by B3 - Brazil Stock Exchange and Over-the-Counter Market.
+Description: Reads public files released by B3 - Brazil Stock Exchange and Over-the-Counter Market - <http://www.b3.com.br/en_us/market-data-and-indices/data-services/market-data/historical-data/newsletters/search-by-trading-session/search-by-trading-session/>.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

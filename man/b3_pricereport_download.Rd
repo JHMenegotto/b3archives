@@ -19,3 +19,8 @@ a file
 \description{
 Downloads archive Pricing Report BVBG.086.01 from B3's website
 }
+\examples{
+\donttest{
+b3_pricereport_download(as.Date("2020-01-31"))
+}
+}

@@ -15,3 +15,8 @@ a data_frame with tidy data
 \description{
 Read and process Index Report BVBG.087.01
 }
+\examples{
+\donttest{
+b3_indexreport_read(b3_indexreport_download(as.Date("2020-01-31")))
+}
+}
